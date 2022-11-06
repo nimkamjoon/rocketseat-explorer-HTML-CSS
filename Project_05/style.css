@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;800&display=swap');
+
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    background-color: #28293E;
+    margin: auto;
+    max-width: 33rem;
+}
+
+header {
+    text-align: center;
+    margin-top: 5rem;
+    color: white;
+    opacity: 0;
+    animation-name: easein;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes easein {
+    0% {
+        transform: translateY(-120px);
+    }    
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header p {
+    opacity: 0.5;
+    text-transform: uppercase;
+    line-height: 3.2rem;
+    letter-spacing: 0.3rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: center;   
+    padding-top: 5rem;
+}
+
+section {
+    background-color: rgb(204, 146, 162);
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem 2.5rem;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    border-radius: 6px;
+    transition-property: transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
+}
+
+section:nth-of-type(1) {
+    background-image: url('assets/img2.avif');
+}
+section:nth-of-type(2) {
+    background-image: url('assets/img1.jpg');
+}
+section:nth-of-type(3) {
+    background-image: url('assets/img.jpg');
+}
+section:nth-of-type(4) {
+    background-image: url('assets/img3.jpg');
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+.category {
+    align-self: flex-start;
+    padding: .6rem 1rem;
+    background-color: white;
+    border-radius: 19px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+h2 {
+   color: white;
+   font-size: 4rem; 
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: 100rem;
+    }
+    main {
+        padding: 5rem;
+        display: grid;
+        grid-template-areas: "A B B""C C D";
+        gap: 2rem;
+    }
+    section:nth-of-type(1) {
+        grid-area: A;
+    }
+    section:nth-of-type(2) {
+        grid-area: B;
+    }
+    section:nth-of-type(3) {
+        grid-area: C;
+    }
+    section:nth-of-type(4) {
+        grid-area: D;
+    }
+}

@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Archivo', sans-serif;
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+.bgBox {
+    background-color: #121214;
+    height: 368px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+}
+
+main {
+    margin: auto;
+    width: 736px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-top: 80px;
+    margin-bottom: 42px;
+    width: 320px;
+    align-self:flex-start
+}
+
+header h1 {
+    color: white;
+    margin-bottom: 24px;
+    font-size: 2.25rem;
+}
+
+header p {
+    color: #42D3FF;
+}
+
+article {
+    background-color: #FAFAFC;
+    border-radius: 8px 8px 0px 0px;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin-top: 16px;
+    background-color: #dddddd;
+}
+
+h2:not(:first-of-type) {
+    margin-top: 48px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+label span {
+    font-size: 0.8rem;
+    opacity: 0.45;
+    margin-left: 8px;
+}
+
+input, textarea, select {
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    padding-left: 24px;
+}
+
+textarea {
+    padding-top: 24px;
+    line-height: 1.1rem;
+    resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input, select, button {
+    line-height: 3.2rem;
+}
+
+select {
+    height: 3.5rem;
+    appearance: none;       /* Remove default arrow */
+    background-image: url('assets/\Select.png');  /* Add custom arrow */
+    background-repeat: no-repeat; 
+    background-position: 570px;
+}
+
+.dateInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoBox input {
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 96px;
+    margin-bottom: -8px;
+}
+
+#eventDate {
+    width: 232px;
+}
+
+button {
+    align-self: center;
+    margin-top: 32px;
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #04D361;
+    color: #ffffff;
+    font-size: 1rem;
+    padding-top: 4px;
+}
+
+button::after {
+    content: '';
+    display: block;
+    background-color: #F0F0F4;
+    height: 136px;
+    width: 736px;
+    position: relative;
+    bottom: 96px;
+    left: -74px;
+    border-radius: 0 0 8px 8px;
+    z-index: -2;
+}
+
+button:hover {
+    background-color: #42D3FF;
+    transition: ease-in 150ms;
+}
+
+/* checkbox */
+
+.checkbox {
+    line-height: 3.5rem;
+    margin-top: -64px;
+    margin-left: -6px;
+}
+
+.checkbox label {
+	display: flex; 
+    align-items: center; 
+	position: relative;
+}
+
+.checkbox input {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.checkbox label > span {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	border: 2px solid #9e9e9e;
+	margin-right: 15px;
+	border-radius: 3px;
+	transition: all .3s;
+}
+
+input:checked + label > span {
+	border: 3px solid #42D3FF;
+}
+
+input:checked + label > span::before {
+	content: '';
+	position: absolute;
+	top: 26px;
+	left: 15px;
+	border-right: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transform-origin: 0% 100%;
+	animation: checked-box 125ms 250ms forwards;
+}
+
+@keyframes checked-box {
+	0% {
+		width: 0;
+		height: 0;
+		border-color: #212121;
+		transform: translate(0,0) rotate(45deg);
+	}
+	33% {
+		width: 4px;
+		height: 0;
+		border-color: #212121;
+		transform: translate(0,0) rotate(45deg);
+	}
+	100% {
+		width: 4px;
+		height: 8px;
+		border-color: #212121;
+		transform: translate(0,-8px) rotate(45deg);
+	}
+}

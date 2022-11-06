@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --accent: rgb(255, 153, 0);
+    --title-color: rgb(8, 8, 8);
+    --text-color: rgb(125, 121, 135);
+    --text-size: 0.9rem;
+    --title-size: 3rem;
+    --font: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    text-align: center;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+h1 {
+    font-weight: 500;
+    font-size: var(--title-size);
+    color: var(--title);
+    margin-bottom: 32px;
+}
+
+p {
+    font-size: var(--text-size);
+    color: var(--text-color);
+    margin-bottom: 32px;
+    line-height: 1.75rem;
+}
+
+a {
+    color: var(--accent);
+    font-size: var(--text-size);
+    text-decoration: none;
+    margin-right: 1.5rem;
+}
+
+.hero {
+    width: 592px;
+    margin: auto;
+}
+
+.hero img {
+    margin-bottom: 72px;
+}
+
+.separador {
+    border: 1px rgb(236, 239, 242) solid;
+    margin-bottom: 8px;
+}
+
+footer {
+    width: 592px;
+    margin: 72px auto;
+}
+
+.decor {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
